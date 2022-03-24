@@ -1,4 +1,5 @@
 /*====  RESET ============================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,3 +18,20 @@
     width: 100%;
     height: auto;
   }
+  /*=== VARIABLES========================== */
+ :root{
+    --text-label: font-family: 'Mulish', sans-serif; font-size: 14px; font-weight:400;
+    --text-paragaph: font-family: 'Mulish', sans-serif; font-size:14px; font-weight: bold;
+
+    --white-color:#FFFFFF;
+    --background-color:#F2F6FF;
+    --button-color:#01A7C2;
+    --button-pressed-color:#0E7182;
+    --error-color:#DF4A4A;
+    --text-color: #303030;
+    --text-placeholder-color:#B1B9CC;    
+ }
+ /* === BASE=============== */
+ main{
+     background: var(--background-color);
+ }
