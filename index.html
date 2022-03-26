@@ -39,11 +39,33 @@
               type="text"
               id="valorPedido"
               placeholder="Digite o valor aqui"
+              step="0.01"
+              name="quantity"
+              min="0.01"
               required
             />
           </fieldset>
-          <fieldset class="valor-gorjeta"></fieldset>
-          <fieldset class="pessoas"></fieldset>
+          <fieldset class="valor-gorjeta">
+            <legend>Quanto quer dar de gorjeta? <span class="vermelho">*</span></legend>
+
+                <div class="porcentagens">
+                    <input type="radio" id="5prc" name="valorGorjeta" value="5">
+                    <label for="5prc">5%</label>
+
+                    <input type="radio" id="10prc" name="valorGorjeta" value="10">
+                    <label for="10prc">10%</label>
+
+                    <input type="radio" id="15prc" name="valorGorjeta" value="15">
+                    <label for="15prc">15%</label>
+
+                    <input type="radio" id="25prc" name="valorGorjeta" value="25">
+                    <label for="25prc">25%</label>
+
+                    <input class="gorjeta-personalizada" id="gorjetaPersonalizada" type="number" placeholder="Personalize aqui">
+          </fieldset>
+          <fieldset class="pessoas">
+            
+          </fieldset>
         </div>
       </form>
     </main>

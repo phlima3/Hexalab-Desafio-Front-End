@@ -29,6 +29,7 @@ input {
   font-size: 14px;
   font-weight: 700;
   border: none;
+  text-align: right;
 }
 .result input::placeholder {
   color: #ffffff;
