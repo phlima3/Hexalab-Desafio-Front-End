@@ -18,18 +18,19 @@ img {
   width: 100%;
   height: auto;
 }
-p {
+label {
   font-family: 'Mulish', sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
+
 input {
   font-family: 'Mulish', sans-serif;
   font-size: 14px;
   font-weight: 700;
   border: none;
 }
-input::placeholder {
+.result input::placeholder {
   color: #ffffff;
   padding: 12px 16px;
 }
@@ -37,10 +38,14 @@ input::placeholder {
 fieldset {
   border: none;
 }
+.vermelho {
+  color: var(--error-color);
+}
 /*=== VARIABLES========================== */
 :root {
   --white-color: #ffffff;
-  --background-color: #f2f6ff;
+  --background-color: #e6f6f9;
+  --background-input: #f2f6ff;
   --button-color: #01a7c2;
   --button-pressed-color: #0e7182;
   --error-color: #df4a4a;
@@ -54,7 +59,9 @@ main {
 
   background: var(--background-color);
   display: flex;
+  flex-direction: column;
 }
+/* ===RESULTADO============ */
 .result {
   margin-left: 1.5rem;
   margin-top: 1.5rem;
@@ -69,4 +76,34 @@ main {
 }
 .result .valor-pessoa {
   margin-top: 1.5rem;
+}
+
+/* ===FORM=============== */
+.container {
+  width: 327px;
+  height: 416px;
+  margin: 1.5rem;
+  border-radius: 24px;
+
+  background: var(--white-color);
+}
+fieldset {
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+}
+.valor-pedido input {
+  background: var(--background-input);
+
+  width: 295px;
+  height: 42px;
+  border-radius: 8px;
+}
+.valor-pedido input::placeholder {
+  font-family: 'Mulish', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+
+  color: var(--text-placeholder-color);
+  text-align: right;
+  margin: 12px 10px;
 }

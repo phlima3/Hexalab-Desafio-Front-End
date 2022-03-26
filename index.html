@@ -20,14 +20,32 @@
     <main>
       <div class="result">
         <div class="valor-total">
-          <p>Valor total da gorjeta</p>
+          <label for="totalGorjeta">Valor total da gorjeta</label>
           <input type="text" id="totalGorjeta" placeholder="R$" disabled />
         </div>
         <div class="valor-pessoa">
-          <p>Valor que cada pessoa irá pagar de gorjeta</p>
-          <input type="text" id="totalGorjeta" placeholder="R$" disabled />
+          <label for="gorjetaPessoa"
+            >Valor que cada pessoa irá pagar de gorjeta</label
+          >
+          <input type="text" id="gorjetaPessoa" placeholder="R$" disabled />
         </div>
       </div>
+      <form>
+        <div class="container">
+          <fieldset class="valor-pedido">
+            <label for="valorPedido"> Digite o valor total do pedido</label>
+            <span class="vermelho">*</span>
+            <input
+              type="text"
+              id="valorPedido"
+              placeholder="Digite o valor aqui"
+              required
+            />
+          </fieldset>
+          <fieldset class="valor-gorjeta"></fieldset>
+          <fieldset class="pessoas"></fieldset>
+        </div>
+      </form>
     </main>
 
     <script src="main.js"></script>
