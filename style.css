@@ -86,12 +86,15 @@ main {
   margin: 1.5rem;
   border-radius: 24px;
 
+  display: flex;
+  flex-direction: column;
   background: var(--white-color);
 }
 fieldset {
   margin-left: 1.5rem;
   margin-top: 1.5rem;
 }
+/* ===VALOR PEDIDO======== */
 .valor-pedido input {
   background: var(--background-input);
 
@@ -107,4 +110,28 @@ fieldset {
   color: var(--text-placeholder-color);
   text-align: right;
   margin: 12px 10px;
+}
+/*===PORCENTAGEM GORJETA ============== */
+.porcentagens {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+input[type='radio'] {
+  display: none;
+  /* SOFRI PRA DESCOBRIR ISSO AQUI */
+}
+input[type='radio'] + label {
+  padding: 20px 54px;
+  margin: 4px;
+  text-align: center;
+
+  font-family: 'Mulish', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+
+  border-radius: 8px;
+  background-color: var(--button-color);
+  color: var(--white-color);
 }
