@@ -21,20 +21,22 @@
       <div class="result">
         <div class="valor-total">
           <label for="totalGorjeta">Valor total da gorjeta</label>
-          <input type="text" id="totalGorjeta" placeholder="R$" disabled />
+          <input type="text" id="totalGorjeta"  disabled />
         </div>
         <div class="valor-pessoa">
           <label for="gorjetaPessoa"
             >Valor que cada pessoa irá pagar de gorjeta</label
           >
-          <input type="text" id="gorjetaPessoa" placeholder="R$" disabled />
+          <input type="text" id="gorjetaPessoa" disabled />
         </div>
       </div>
       <form>
         <div class="container">
           <fieldset class="valor-pedido">
-            <label for="valorPedido"> Digite o valor total do pedido</label>
+            <section>
+              <label for="valorPedido"> Digite o valor total do pedido</label>
             <span class="vermelho">*</span>
+            </section>
             <input
               type="text"
               id="valorPedido"
@@ -49,8 +51,9 @@
             <legend>Quanto quer dar de gorjeta? <span class="vermelho">*</span></legend>
 
                 <div class="porcentagens">
+
                     <input type="radio" id="5prc" name="valorGorjeta" value="5" class="cinco">
-                    <label for="5prc" style="padding: 20px 58px"> 5%</label>
+                    <label for="5prc" style="padding: 13px 58px"> 5%</label>
 
                     <input type="radio" id="10prc" name="valorGorjeta" value="10">
                     <label for="10prc">10%</label>
@@ -60,10 +63,26 @@
 
                     <input type="radio" id="25prc" name="valorGorjeta" value="25">
                     <label for="25prc">25%</label>
+                    <!-- PARTE DOS RADIO BUTTONS FINALIZADA, SENTI MUITA DIFICULDADE EM ALINHAR O LAYOUT, FUNCIONOU A BASE DE ALGUMAS GAMBIARRAS -->
 
-                   <!-- <input class="gorjeta-personalizada" id="gorjetaPersonalizada" type="number" placeholder="Personalize aqui">
-          </fieldset>  -->
+                  <input class="gorjeta-personalizada" id="gorjetaPersonalizada" type="number" placeholder="Personalize aqui"> 
+                </div>
+          </fieldset>  
           <fieldset class="pessoas">
+            <section>
+              <label for="valorPedido">Quantas pessoas irão pagar?</label>
+            <span class="vermelho">*</span>
+            </section>
+            <input
+              type="text"
+              id="qtdPessoas"
+              placeholder="Digite o valor aqui"
+              
+              name="quantity"
+              
+              required
+            />
+
             
           </fieldset>
         </div>

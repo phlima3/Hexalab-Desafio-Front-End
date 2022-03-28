@@ -19,18 +19,19 @@ img {
   height: auto;
 }
 label {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
 
 input {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 14px;
   font-weight: 700;
   border: none;
   text-align: right;
 }
+
 .result input::placeholder {
   color: #ffffff;
   padding: 12px 16px;
@@ -74,6 +75,16 @@ main {
   border-radius: 8px;
   background: var(--button-color);
   color: #ffffff;
+  margin-top: 8px;
+}
+.result input[type="text"] {
+  height: 42 px;
+  background-image: url(assets/images/ZZWhite.svg);
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+.result .valor-total label {
+  margin-bottom: 20px;
 }
 .result .valor-pessoa {
   margin-top: 1.5rem;
@@ -90,48 +101,130 @@ main {
   flex-direction: column;
   background: var(--white-color);
 }
-fieldset {
-  margin-left: 1.5rem;
-  margin-top: 1.5rem;
-}
+
 /* ===VALOR PEDIDO======== */
+
+.valor-pedido{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 16px;
+}
+
 .valor-pedido input {
   background: var(--background-input);
 
-  width: 295px;
+  width: 296px;
   height: 42px;
   border-radius: 8px;
+  margin-top: 8px;
 }
+.valor-pedido input[type="text"] {
+  height: 42 px;
+  background-image: url(assets/images/ZZrs.svg);
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+
 .valor-pedido input::placeholder {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 14px;
   font-weight: 400;
 
   color: var(--text-placeholder-color);
-  text-align: right;
+
   margin: 12px 10px;
 }
+
 /*===PORCENTAGEM GORJETA ============== */
+.valor-gorjeta{
+  margin: 25px 16px;
+}
+.valor-gorjeta  legend{
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
 .porcentagens {
-  margin-top: 20px;
+  margin-top: 8px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-input[type='radio'] {
+
+input[type="radio"] {
   display: none;
   /* SOFRI PRA DESCOBRIR ISSO AQUI */
 }
-input[type='radio'] + label {
-  padding: 20px 54px;
+
+input[type="radio"] + label {
+  padding: 14px 54px;
   margin: 4px;
   text-align: center;
 
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 14px;
   font-weight: 700;
 
   border-radius: 8px;
   background-color: var(--button-color);
   color: var(--white-color);
+  width: calc(50% - 8px);
 }
+input:checked + label  {
+  
+  background-color: var(--button-pressed-color);
+  
+  transition: 0.4s;
+} 
+ #gorjetaPersonalizada {
+  background: var(--background-input);
+
+  width: 296px;
+  height: 42px;
+  border-radius: 8px;
+  margin-top: 8px;
+
+
+
+  background-image: url(assets/images/ZZrs.svg);
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+#gorjetaPersonalizada::placeholder {
+
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-placeholder-color);
+  margin-right: 16px;
+}
+/* ===QUANTIDADE DE PESSOAS ================ */
+.pessoas{
+  margin: 1px 16px;
+}
+#qtdPessoas{
+  background: var(--background-input);
+
+  width: 296px;
+  height: 42px;
+  border-radius: 8px;
+  margin-top: 8px;
+
+
+
+  background-image: url(assets/images/Vectoruser.svg);
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+#qtdPessoas::placeholder {
+
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-placeholder-color);
+  margin-right: 16px;
+}
+
+
+
