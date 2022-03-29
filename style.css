@@ -84,7 +84,6 @@ main {
   background-position: 20px center;
 }
 .result .valor-total label {
-  margin-bottom: 20px;
 }
 .result .valor-pessoa {
   margin-top: 1.5rem;
@@ -219,16 +218,17 @@ input:checked + label {
   margin-right: 16px;
 }
 
+/* ======RESPONSIVO DESKTOP========= */
 @media (min-width: 1400px) {
   main {
-    background: var(--white-color);
+    background: var(--background-input);
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
   }
   form {
     margin-left: 240px;
-
-    background-color: aqua;
   }
   .container {
     width: 485px;
@@ -237,13 +237,16 @@ input:checked + label {
   .valor-pedido {
     margin: 32px;
   }
+  .valor-pedido input {
+    width: 100%;
+  }
   .valor-gorjeta {
     margin: 3px 32px;
   }
   #gorjetaPersonalizada {
     background: var(--background-input);
 
-    width: 285px;
+    width: 270px;
     height: 42px;
     border-radius: 8px;
     margin-top: 8px;
@@ -251,20 +254,35 @@ input:checked + label {
     background-image: url(assets/images/ZZrs.svg);
     background-repeat: no-repeat;
     background-position: 20px center;
+
+    margin-right: 4px;
+  }
+
+  #qtdPessoas {
+    width: 100%;
   }
 
   input[type="radio"] + label {
     width: 30%;
   }
   .pessoas {
-    margin: 12px 32px;
+    margin: 28px;
   }
 
   .result {
+    background-color: var(--background-color);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     float: left;
+
+    width: 500px;
+    height: 500px;
+  }
+  .valor-total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
