@@ -217,7 +217,40 @@ input:checked + label {
   margin-right: 16px;
 }
 
-/* ======RESPONSIVO DESKTOP========= */
+/* ===RESPONSIVO 935============ */
+@media (min-width: 935px){
+
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .result{
+    margin: 0;
+  }
+  .valor-total{
+    display: flex;
+    flex-direction: column;
+  }
+  .valor-pessoa{
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+
+
+
+
+}
+
+
+
+
+
+
+/* ======RESPONSIVO DESKTOP 1400========= */
 @media (min-width: 1400px) {
   body {
     display: flex;
