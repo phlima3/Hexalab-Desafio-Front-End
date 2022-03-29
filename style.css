@@ -104,7 +104,7 @@ main {
 
 /* ===VALOR PEDIDO======== */
 
-.valor-pedido{
+.valor-pedido {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -137,10 +137,10 @@ main {
 }
 
 /*===PORCENTAGEM GORJETA ============== */
-.valor-gorjeta{
+.valor-gorjeta {
   margin: 25px 16px;
 }
-.valor-gorjeta  legend{
+.valor-gorjeta legend {
   font-family: "Mulish", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -171,13 +171,12 @@ input[type="radio"] + label {
   color: var(--white-color);
   width: calc(50% - 8px);
 }
-input:checked + label  {
-  
+input:checked + label {
   background-color: var(--button-pressed-color);
-  
+
   transition: 0.4s;
-} 
- #gorjetaPersonalizada {
+}
+#gorjetaPersonalizada {
   background: var(--background-input);
 
   width: 296px;
@@ -185,14 +184,11 @@ input:checked + label  {
   border-radius: 8px;
   margin-top: 8px;
 
-
-
   background-image: url(assets/images/ZZrs.svg);
   background-repeat: no-repeat;
   background-position: 20px center;
 }
 #gorjetaPersonalizada::placeholder {
-
   font-family: "Mulish", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -200,10 +196,10 @@ input:checked + label  {
   margin-right: 16px;
 }
 /* ===QUANTIDADE DE PESSOAS ================ */
-.pessoas{
+.pessoas {
   margin: 1px 16px;
 }
-#qtdPessoas{
+#qtdPessoas {
   background: var(--background-input);
 
   width: 296px;
@@ -211,14 +207,11 @@ input:checked + label  {
   border-radius: 8px;
   margin-top: 8px;
 
-
-
   background-image: url(assets/images/Vectoruser.svg);
   background-repeat: no-repeat;
   background-position: 20px center;
 }
 #qtdPessoas::placeholder {
-
   font-family: "Mulish", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -226,5 +219,52 @@ input:checked + label  {
   margin-right: 16px;
 }
 
+@media (min-width: 1400px) {
+  main {
+    background: var(--white-color);
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  form {
+    margin-left: 240px;
 
+    background-color: aqua;
+  }
+  .container {
+    width: 485px;
+  }
 
+  .valor-pedido {
+    margin: 32px;
+  }
+  .valor-gorjeta {
+    margin: 3px 32px;
+  }
+  #gorjetaPersonalizada {
+    background: var(--background-input);
+
+    width: 285px;
+    height: 42px;
+    border-radius: 8px;
+    margin-top: 8px;
+
+    background-image: url(assets/images/ZZrs.svg);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+  }
+
+  input[type="radio"] + label {
+    width: 30%;
+  }
+  .pessoas {
+    margin: 12px 32px;
+  }
+
+  .result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    float: left;
+  }
+}
