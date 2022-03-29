@@ -217,6 +217,16 @@ input:checked + label {
   margin-right: 16px;
 }
 
+/* ===RESPONSIVO 800 px */
+@media (min-width: 800px){
+  main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+}
+
 /* ===RESPONSIVO 935============ */
 @media (min-width: 935px){
 
