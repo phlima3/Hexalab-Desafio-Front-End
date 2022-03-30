@@ -10,5 +10,6 @@ function calcularJantar(){
 
 }
 document.getElementById("calcular").onclick = function(){
+    e.preventDefault();
     calcularJantar();
 }
