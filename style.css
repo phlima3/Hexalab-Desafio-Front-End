@@ -43,6 +43,26 @@ fieldset {
 .vermelho {
   color: var(--error-color);
 }
+.erro{
+  border: var(--error-color);
+  outline-color: var(--error-color);
+  color: var(--error-color);
+}
+
+.erro:focus{
+  border: var(--error-color);
+  outline-color:var(--error-color);
+  color: var(--error-color);
+}
+.active{
+    background-color: #9FE8DF;
+    color: #00474B;
+}
+
+.desactive{
+    background-color: #0D686D;
+}
+
 /*=== VARIABLES========================== */
 :root {
   --white-color: #ffffff;
@@ -218,8 +238,8 @@ input:checked + label {
 }
 
 /* ===RESPONSIVO 800 px */
-@media (min-width: 800px){
-  main{
+@media (min-width: 800px) {
+  main {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -228,37 +248,25 @@ input:checked + label {
 }
 
 /* ===RESPONSIVO 935============ */
-@media (min-width: 935px){
-
-  main{
+@media (min-width: 935px) {
+  main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
   }
-  .result{
+  .result {
     margin: 0;
   }
-  .valor-total{
+  .valor-total {
     display: flex;
     flex-direction: column;
   }
-  .valor-pessoa{
+  .valor-pessoa {
     display: flex;
     flex-direction: column;
-    
   }
-
-
-
-
-
 }
-
-
-
-
-
 
 /* ======RESPONSIVO DESKTOP 1400========= */
 @media (min-width: 1400px) {
@@ -268,8 +276,6 @@ input:checked + label {
     align-items: center;
     margin-top: 15rem;
     background-color: var(--background-input);
-
-
   }
   main {
     background: var(--white-color);
@@ -281,7 +287,7 @@ input:checked + label {
     width: 80vh;
     height: 37vh;
   }
-  
+
   .container {
     width: 485px;
     margin: 0;
@@ -326,9 +332,8 @@ input:checked + label {
     background-color: var(--background-color);
     display: flex;
     justify-content: center;
-    
+
     flex-direction: column;
-    
 
     width: 360px;
     height: 328px;
@@ -336,15 +341,14 @@ input:checked + label {
 
     margin-top: 0;
     margin-left: 0;
-
   }
   .valor-total {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  .valor-total , .valor-pessoa{
+  .valor-total,
+  .valor-pessoa {
     margin-left: 20px;
   }
-  
 }

@@ -1,23 +1,14 @@
+function calcularJantar(){
+    var totalConta = document.getElementById("valorPedido").value;
+    var taxaServico = document.getElementsByClassName("bt-gorjeta").value;
+    var numeroPessoas = document.getElementById("qtdPessoas").value;
 
-
-function formatarDinheiro(input){
-
-
-
-    var valorFormatado = parseFloat(input.value).toFixed(2) 
-    console.log(valorFormatado)
-    input.value =  valorFormatado;
- 
-
-
-    
-}
-var inputValorPedido = document.getElementById('valorPedido') 
-inputValorPedido.onchange = (ev) => {
-    console.log(ev.target.value)
-    formatarDinheiro(ev.target)
+    if(totalConta === "" || taxaServico == 0 || isNaN(totalConta) || isNaN(numeroPessoas)){
+        alert("Por favor, coloque um valor válido!")
+        return;
+    }
 
 }
-
-
-
+document.getElementById("calcular").onclick = function(){
+    calcularJantar();
+}

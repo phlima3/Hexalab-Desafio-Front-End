@@ -14,7 +14,6 @@
       rel="stylesheet"
     />
 
-
     <title>Calculadora de Gorjeta</title>
   </head>
   <body>
@@ -39,11 +38,11 @@
               <span class="vermelho">*</span>
             </section>
             <input
-              type="number"
+              type="text"
               id="valorPedido"
               placeholder="Digite o valor aqui"
               step="0.01"
-              name="quantity"
+              name="valor"
               min="0.01"
               required
             />
@@ -53,30 +52,48 @@
               Quanto quer dar de gorjeta? <span class="vermelho">*</span>
             </legend>
 
-            <div class="porcentagens">
+            <div class="porcentagens" id="porcentagemGorjeta">
               <input
                 type="radio"
                 id="5prc"
                 name="valorGorjeta"
                 value="5"
-                class="cinco"
+                class="bt-gorjeta"
               />
               <label for="5prc"> 5%</label>
 
-              <input type="radio" id="10prc" name="valorGorjeta" value="10" />
+              <input
+                type="radio"
+                id="10prc"
+                name="valorGorjeta"
+                value="10"
+                class="bt-gorjeta"
+              />
               <label for="10prc">10%</label>
 
-              <input type="radio" id="15prc" name="valorGorjeta" value="15" />
+              <input
+                type="radio"
+                id="15prc"
+                name="valorGorjeta"
+                value="15"
+                class="bt-gorjeta"
+              />
               <label for="15prc">15%</label>
 
-              <input type="radio" id="25prc" name="valorGorjeta" value="25" />
+              <input
+                type="radio"
+                id="25prc"
+                name="valorGorjeta"
+                value="25"
+                class="bt-gorjeta"
+              />
               <label for="25prc">25%</label>
               <!-- PARTE DOS RADIO BUTTONS FINALIZADA, SENTI MUITA DIFICULDADE EM ALINHAR O LAYOUT, FUNCIONOU A BASE DE ALGUMAS GAMBIARRAS -->
 
               <input
                 class="gorjeta-personalizada"
                 id="gorjetaPersonalizada"
-                type="number"
+                type="text"
                 placeholder="Personalize aqui"
               />
             </div>
@@ -95,10 +112,11 @@
             />
           </fieldset>
         </div>
-        <input type="submit" value="Enviar">
+          <input type="submit" value="Enviar" id="calcular" />
       </form>
     </main>
 
     <script src="main.js"></script>
+    
   </body>
 </html>
