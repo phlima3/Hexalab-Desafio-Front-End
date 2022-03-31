@@ -30,7 +30,7 @@
           <input type="text" id="gorjetaPessoa" disabled />
         </div>
       </div>
-      <form>
+      <form autocomplete="off" id="enviarForm">
         <div class="container">
           <fieldset class="valor-pedido">
             <section>
@@ -38,13 +38,14 @@
               <span class="vermelho">*</span>
             </section>
             <input
-              type="text"
+              type="number"
+              class="erro"
               id="valorPedido"
               placeholder="Digite o valor aqui"
               step="0.01"
               name="valor"
               min="0.01"
-              required
+             
             />
           </fieldset>
           <fieldset class="valor-gorjeta">
@@ -104,7 +105,7 @@
               <span class="vermelho">*</span>
             </section>
             <input
-              type="text"
+              type="number"
               id="qtdPessoas"
               placeholder="Digite o valor aqui"
               name="quantity"
@@ -112,11 +113,10 @@
             />
           </fieldset>
         </div>
-          <input type="submit" value="Enviar" id="calcular" />
+        <input type="submit" value="Enviar" id="calcular" />
       </form>
     </main>
 
     <script src="main.js"></script>
-    
   </body>
 </html>
