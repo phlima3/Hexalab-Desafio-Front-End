@@ -31,6 +31,9 @@ input {
   border: none;
   text-align: right;
 }
+input:required{
+  border-color: #df4a4a;
+}
 
 .result input::placeholder {
   color: #ffffff;
