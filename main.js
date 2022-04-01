@@ -9,38 +9,60 @@ const gorjetaPorcentagemPersonal = document.getElementById(
 const numeroPessoas = document.getElementById("qtdPessoas"); //Quantidade de pessoas que irão pagar
 const valorGorjetaTotal = document.getElementById("totalGorjeta"); //Valor a ser exibido da gorjeta total
 const valorGorjetaPessoa = document.getElementById("gorjetaPessoa"); //Valor a ser exibido da gorjeta por pessoa
+
 var form = document.querySelector("#enviarForm");
 var botao = document.querySelector("#calcular");
 
-function verificarInput() {
-  if (
-    gorjetaPorcentagemBotao == 0 ||
-    isNaN(totalPedido) ||
-    isNaN(numeroPessoas)
-  ) {
-    alert("Por favor, coloque um valor válido!");
-    return;
-  }
+let inputsRadio
+
+
+function adicionarErro(){
+  totalPedido.className= "erro";
+  gorjetaPorcentagemPersonal.className = 'erro'; 
+  numeroPessoas.className = 'erro';
+  totalPedido.focus();
 }
+function removerErro(){
+  totalPedido.classList.remove("erro") ;
+  gorjetaPorcentagemPersonal.classList.remove("erro");  
+  numeroPessoas.classList.remove("erro");
+}
+
+// VERIFICAR INPUT
+function verificarInput() {
+if (isNaN(totalPedido.value) || totalPedido.value <= 0) {
+  adicionarErro();  
+}
+else if (isNaN(form.valorGorjeta.value)  || form.valorGorjeta.value <=0){
+  if(gorjetaPorcentagemPersonal.value <=0 || isNaN(gorjetaPorcentagemPersonal.value)){
+    adicionarErro();
+  }
+  
+}
+
+// else if (isNaN(gorjetaPorcentagemPersonal.value) || gorjetaPorcentagemPersonal.value <= 0){
+
+// }
+
+else {
+  removerErro();
+}
+
+
+}
+// CONTA
+
+
+
 
 botao.addEventListener("click", function (event) {
   event.preventDefault();
-  console.log("A porcentagem escolhida foi de: ", form.valorGorjeta.value, "%");
+
+  console.log("A porcentagem escolhida foi de: ", form.valorGorjeta.value);
+  console.log(typeof form.valorGorjeta.value);
   console.log("O valor total do pedido em R$ foi de: ", totalPedido.value);
   console.log("O total de pessoas que irão pagar é de: ", numeroPessoas.value);
-});
+  
+  verificarInput();
 
-//   var textoGorjetaPessoa = document.getElementById("gorjetaPessoa").value;
-
-//   var valorPessoa = totalConta / numeroPessoas;
-
-//   textoGorjetaPessoa.innerText = textoGorjetaPessoa;
-
-//   console.log(textoGorjetaPessoa);
-//   console.log("Valor da conta por pessoa é:", valorPessoa);
-// }
-
-// document.getElementById("enviarForm").onsubmit = function (e) {
-//   e.preventDefault();
-//   calcularJantar();
-// };
+})

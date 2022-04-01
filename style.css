@@ -31,9 +31,6 @@ input {
   border: none;
   text-align: right;
 }
-input:required{
-  border-color: #df4a4a;
-}
 
 .result input::placeholder {
   color: #ffffff;
@@ -47,24 +44,13 @@ fieldset {
   color: var(--error-color);
 }
 .erro{
-  border: var(--error-color);
-  outline-color: var(--error-color);
+  
+  outline: var(--error-color) 1px solid !important;
   color: var(--error-color);
 }
 
-.erro:focus{
-  border: var(--error-color);
-  outline-color:var(--error-color);
-  color: var(--error-color);
-}
-.active{
-    background-color: #9FE8DF;
-    color: #00474B;
-}
 
-.desactive{
-    background-color: #0D686D;
-}
+
 
 /*=== VARIABLES========================== */
 :root {
@@ -194,9 +180,10 @@ input[type="radio"] + label {
 }
 input:checked + label {
   background-color: var(--button-pressed-color);
-
   transition: 0.4s;
+  
 }
+
 #gorjetaPersonalizada {
   background: var(--background-input);
 
