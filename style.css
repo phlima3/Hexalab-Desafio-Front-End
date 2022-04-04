@@ -227,6 +227,44 @@ input:checked + label {
   margin-right: 16px;
 }
 
+
+@media (min-width: 375px) {
+  form{
+    margin-left: 0px!important;
+  }
+}
+/* ===REPONSIVO  */
+
+
+@media (min-width: 486px) {
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  form{
+    margin-left: 20px;
+  }
+  .result{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .valor-total{
+    display: flex;
+    flex-direction: column;
+  }
+  .valor-pessoa{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+}
+
 /* ===RESPONSIVO 800 px */
 @media (min-width: 800px) {
   main {
@@ -280,6 +318,7 @@ input:checked + label {
 
   .container {
     width: 485px;
+    height: 394px;
     margin: 0;
   }
 

@@ -13,47 +13,45 @@ const valorGorjetaPessoa = document.getElementById("gorjetaPessoa"); //Valor a s
 var form = document.querySelector("#enviarForm");
 var botao = document.querySelector("#calcular");
 
-let inputsRadio
+let inputsRadio;
 
-
-function adicionarErro(){
-  totalPedido.className= "erro";
-  gorjetaPorcentagemPersonal.className = 'erro'; 
-  numeroPessoas.className = 'erro';
+function adicionarErro() {
+  totalPedido.className = "erro";
+  gorjetaPorcentagemPersonal.className = "erro";
+  numeroPessoas.className = "erro";
   totalPedido.focus();
 }
-function removerErro(){
-  totalPedido.classList.remove("erro") ;
-  gorjetaPorcentagemPersonal.classList.remove("erro");  
+function removerErro() {
+  totalPedido.classList.remove("erro");
+  gorjetaPorcentagemPersonal.classList.remove("erro");
   numeroPessoas.classList.remove("erro");
 }
 
 // VERIFICAR INPUT
 function verificarInput() {
-if (isNaN(totalPedido.value) || totalPedido.value <= 0) {
-  adicionarErro();  
-}
-else if (isNaN(form.valorGorjeta.value)  || form.valorGorjeta.value <=0){
-  if(gorjetaPorcentagemPersonal.value <=0 || isNaN(gorjetaPorcentagemPersonal.value)){
+  if (isNaN(totalPedido.value) || totalPedido.value <= 0) {
     adicionarErro();
+  } else if (isNaN(form.valorGorjeta.value) || form.valorGorjeta.value <= 0) {
+    if (
+      gorjetaPorcentagemPersonal.value <= 0 ||
+      isNaN(gorjetaPorcentagemPersonal.value)
+    ) {
+      adicionarErro();
+    }
+  } else if (
+    form.valorGorjeta.value == 1 &&
+    gorjetaPorcentagemPersonal.value == 1
+  ) {
+    adicionarErro();
+    console.log("Foi digitado os Dois");
+  } else if (isNaN(parseFloat(numeroPessoas.value)) || parseFloat(numeroPessoas.value )  <= 0) {
+    adicionarErro();
+    console.log("Faltou o número de pessoas")
+  } else {
+    removerErro();
   }
-  
-}
-
-// else if (isNaN(gorjetaPorcentagemPersonal.value) || gorjetaPorcentagemPersonal.value <= 0){
-
-// }
-
-else {
-  removerErro();
-}
-
-
 }
 // CONTA
-
-
-
 
 botao.addEventListener("click", function (event) {
   event.preventDefault();
@@ -62,7 +60,7 @@ botao.addEventListener("click", function (event) {
   console.log(typeof form.valorGorjeta.value);
   console.log("O valor total do pedido em R$ foi de: ", totalPedido.value);
   console.log("O total de pessoas que irão pagar é de: ", numeroPessoas.value);
-  
-  verificarInput();
+  console.log(typeof parseFloat(numeroPessoas.value ) );
 
-})
+  verificarInput();
+});
