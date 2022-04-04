@@ -45,10 +45,18 @@ fieldset {
 }
 .erro{
   
-  outline: var(--error-color) 1px solid !important;
+  outline: var(--error-color) 1px solid;
   color: var(--error-color);
 }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 
 
 
@@ -87,7 +95,7 @@ main {
   margin-top: 8px;
 }
 .result input[type="text"] {
-  height: 42 px;
+  height: 42px;
   background-image: url(assets/images/ZZWhite.svg);
   background-repeat: no-repeat;
   background-position: 20px center;
@@ -96,6 +104,8 @@ main {
 .result .valor-pessoa {
   margin-top: 1.5rem;
 }
+
+
 
 /* ===FORM=============== */
 .container {
