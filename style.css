@@ -191,7 +191,6 @@ input[type="radio"] + label {
 input:checked + label {
   background-color: var(--button-pressed-color);
   transition: 0.4s;
-  
 }
 
 #gorjetaPersonalizada {
