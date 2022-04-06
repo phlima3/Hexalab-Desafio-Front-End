@@ -21,13 +21,20 @@
       <div class="result">
         <div class="valor-total">
           <label for="totalGorjeta">Valor total da gorjeta</label>
-          <input type="text" id="totalGorjeta" disabled="true" />
+          <div class="valor-total-gorjeta inputs-resultado">
+            <p id="totalGorjeta">0.00</p>
+          </div>
         </div>
         <div class="valor-pessoa">
           <label for="gorjetaPessoa"
             >Valor que cada pessoa irá pagar de gorjeta</label
           >
-          <input type="text" id="gorjetaPessoa" disabled="true" />
+          <input
+            type="text"
+            id="gorjetaPessoa"
+            disabled="true"
+            placeholder="0.00"
+          />
         </div>
       </div>
       <form autocomplete="off" id="enviarForm">
@@ -39,13 +46,11 @@
             </section>
             <input
               type="number"
-              
               id="valorPedido"
               placeholder="Digite o valor aqui"
               step="0.01"
               name="valor"
               min="0.01"
-             
             />
           </fieldset>
           <fieldset class="valor-gorjeta">
@@ -94,7 +99,7 @@
               <input
                 class="gorjeta-personalizada"
                 id="gorjetaPersonalizada"
-                type="text"
+                type="number"
                 placeholder="Personalize aqui"
               />
             </div>
@@ -109,7 +114,6 @@
               id="qtdPessoas"
               placeholder="Digite o valor aqui"
               name="quantity"
-              
             />
           </fieldset>
         </div>

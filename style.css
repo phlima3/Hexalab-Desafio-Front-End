@@ -30,6 +30,11 @@ input {
   font-weight: 700;
   border: none;
   text-align: right;
+  
+}
+input[type="number"]{
+  padding-right: 10px;
+
 }
 
 .result input::placeholder {
@@ -81,8 +86,9 @@ main {
   flex-direction: column;
 }
 /* ===RESULTADO============ */
+
 .result {
-  margin-left: 1.5rem;
+  margin-left: 0rem;
   margin-top: 1.5rem;
 }
 .result input {
@@ -104,6 +110,33 @@ main {
 .result .valor-pessoa {
   margin-top: 1.5rem;
 }
+.result .inputs-resultado{
+  width: 20rem;
+  height: 2.62rem;
+
+  border-radius: 8px;
+  background: var(--button-color);
+  color: #ffffff;
+  margin-top: 8px;
+
+  height: 42px;
+  background-image: url(assets/images/ZZWhite.svg);
+  background-repeat: no-repeat;
+  background-position: 20px center;
+
+}
+.result .valor-total-gorjeta p{
+
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  text-align: right;
+  margin: 12px;
+ 
+
+}
+
 
 
 
@@ -193,7 +226,7 @@ input:checked + label {
   transition: 0.4s;
 }
 
-#gorjetaPersonalizada {
+.gorjeta-personalizada {
   background: var(--background-input);
 
   width: 296px;
@@ -201,7 +234,7 @@ input:checked + label {
   border-radius: 8px;
   margin-top: 8px;
 
-  background-image: url(assets/images/ZZporc.svg);
+  background-image: url(assets/images/ZZporc.svg) !important;
   background-repeat: no-repeat;
   background-position: 20px center;
 }
