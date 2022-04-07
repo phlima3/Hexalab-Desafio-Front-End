@@ -2,37 +2,25 @@
 const inputs = document.querySelectorAll("input:not(:disabled)");
 const form = document.querySelector("form");
 
-
-
 //PEGAR VALORES INDIVIDUAL
 const total = document.getElementById("valorPedido");
-total.onchange = ()=>{
-  calcularTotal();
-}
 
-const porcentagemBotao = document.getElementsByClassName(
-  'input[name="valorGorjeta"]:checked'
-); 
-porcentagemBotao.forEach(element => {
-console.log(element)
-  element.onchange = ()=>{
-    // calcularTotal(); 
-    alert("Cliquei!")
-  }
-  
-});
+let porcentagem = 0;
 
+total.onkeyup = () => {
+  calcularTotal(porcentagem);
+};
 
 const porcentagemCustom = document.getElementById("gorjetaPersonalizada");
-  porcentagemCustom.onchange = ()=> {
-    calcularTotal();
-  }
-
+porcentagemCustom.onkeyup = () => {
+  porcentagem = porcentagemCustom.value;
+  calcularTotal(porcentagem);
+};
 
 const pessoas = document.getElementById("qtdPessoas");
-  pessoas.onchange = ()=>{
-    calcularTotal();
-  }
+pessoas.onchange = () => {
+  calcularTotal(porcentagem);
+};
 
 //RESULTADO
 const resultadoConta = document.querySelector("#totalGorjeta");
@@ -79,24 +67,17 @@ form.addEventListener("submit", (event) => {
   if (!erro) {
     calcularTotal();
   }
-
-  console.log(erro);
 });
 
-function calcularTotal() {
-  let valorRadioSelected = !porcentagemSelected ? 1 : porcentagemSelected;
-  let valorPersonalizado = !porcentagemCustom.value
-    ? 1
-    : porcentagemCustom.value;
+function calcularTotal(p) {
+  console.log(p);
+  porcentagem = p;
 
-
-
-  resultadoConta.innerHTML = (
-    (total.value * valorRadioSelected * valorPersonalizado) /
-    100
-  ).toLocaleString("pt-BR", { minimumFractionDigits: 2 });
+  resultadoConta.innerHTML = ((total.value * p) / 100).toLocaleString("pt-BR", {
+    minimumFractionDigits: 2,
+  });
   resultadoPessoa.innerHTML = (
-    (total.value * valorRadioSelected * valorPersonalizado) /
+    (total.value * p) /
     100 /
     pessoas.value
   ).toLocaleString("pt-BR", { minimumFractionDigits: 2 });

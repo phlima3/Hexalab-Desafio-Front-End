@@ -47,7 +47,6 @@
               placeholder="Digite o valor aqui"
               name="valor"
               maxlength="9"
-              
             />
           </fieldset>
           <fieldset class="valor-gorjeta">
@@ -62,6 +61,9 @@
                 name="valorGorjeta"
                 value="5"
                 class="bt-gorjeta"
+                onclick="calcularTotal(
+                  this.value
+                )"
               />
               <label for="5prc"> 5%</label>
 
@@ -71,6 +73,10 @@
                 name="valorGorjeta"
                 value="10"
                 class="bt-gorjeta"
+                onclick="calcularTotal(
+                  this.value
+
+                )"
               />
               <label for="10prc">10%</label>
 
@@ -80,6 +86,10 @@
                 name="valorGorjeta"
                 value="15"
                 class="bt-gorjeta"
+                onclick="calcularTotal(
+                  this.value
+
+                )"
               />
               <label for="15prc">15%</label>
 
@@ -89,6 +99,9 @@
                 name="valorGorjeta"
                 value="25"
                 class="bt-gorjeta"
+                onclick="calcularTotal(
+                  this.value
+                )"
               />
               <label for="25prc">25%</label>
               <!-- PARTE DOS RADIO BUTTONS FINALIZADA, SENTI MUITA DIFICULDADE EM ALINHAR O LAYOUT, FUNCIONOU A BASE DE ALGUMAS GAMBIARRAS -->
@@ -111,10 +124,10 @@
               id="qtdPessoas"
               placeholder="Digite o valor aqui"
               name="quantity"
+              value="1"
             />
           </fieldset>
         </div>
-        <input type="submit" value="Enviar" id="calcular" />
       </form>
     </main>
 
