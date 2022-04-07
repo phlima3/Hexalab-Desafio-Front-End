@@ -2,14 +2,37 @@
 const inputs = document.querySelectorAll("input:not(:disabled)");
 const form = document.querySelector("form");
 
-//PEGAR VALORES INDIVIDUAL
-const total = document.querySelector("#valorPedido");
-const porcentagemBotao = document.querySelector(
-  'input[name="valorGorjeta"]:checked'
-);
-const porcentagemCustom = document.querySelector("#gorjetaPersonalizada");
 
-const pessoas = document.querySelector("#qtdPessoas");
+
+//PEGAR VALORES INDIVIDUAL
+const total = document.getElementById("valorPedido");
+total.onchange = ()=>{
+  calcularTotal();
+}
+
+const porcentagemBotao = document.getElementsByClassName(
+  'input[name="valorGorjeta"]:checked'
+); 
+porcentagemBotao.forEach(element => {
+console.log(element)
+  element.onchange = ()=>{
+    // calcularTotal(); 
+    alert("Cliquei!")
+  }
+  
+});
+
+
+const porcentagemCustom = document.getElementById("gorjetaPersonalizada");
+  porcentagemCustom.onchange = ()=> {
+    calcularTotal();
+  }
+
+
+const pessoas = document.getElementById("qtdPessoas");
+  pessoas.onchange = ()=>{
+    calcularTotal();
+  }
 
 //RESULTADO
 const resultadoConta = document.querySelector("#totalGorjeta");
@@ -28,7 +51,6 @@ form.addEventListener("submit", (event) => {
   inputs.forEach((input) => {
     if (input.getAttribute("class") === "bt-gorjeta") {
       radiosValue.push(input.checked);
-
       if (input.checked) {
         porcentagemSelected = input.value;
       }
@@ -67,8 +89,7 @@ function calcularTotal() {
     ? 1
     : porcentagemCustom.value;
 
-  console.log(valorRadioSelected);
-  console.log(valorPersonalizado);
+
 
   resultadoConta.innerHTML = (
     (total.value * valorRadioSelected * valorPersonalizado) /
