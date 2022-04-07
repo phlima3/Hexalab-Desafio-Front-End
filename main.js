@@ -14,13 +14,12 @@ const pessoas = document.querySelector("#qtdPessoas");
 const resultadoConta = document.querySelector("#totalGorjeta");
 const resultadoPessoa = document.querySelector("#gorjetaPessoa");
 
-
-
-
-//VERIFICAR OS INPUTS
+//VERIFICAR OS INPUTSå
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  resultadoConta.innerHTML = (total.value) * (porcentagemCustom.value) / 100;
+  resultadoConta.innerHTML = (total.value * porcentagemCustom.value) / 100;
+  resultadoPessoa.innerHTML =
+    (total.value * porcentagemCustom.value) / 100 / pessoas.value;
 
   const radiosValue = [];
 
@@ -38,7 +37,6 @@ form.addEventListener("submit", (event) => {
     }
   });
   if (radiosValue.indexOf(true) >= 0) {
-    
     if (porcentagemCustom.value != "") {
       porcentagemCustom.className = "erro";
       console.log("Com valor no personalizado");
@@ -47,13 +45,3 @@ form.addEventListener("submit", (event) => {
     }
   }
 });
-
-//CALCULAR GORJETA
-
-
-
-  // resultadoConta.innerHTML = (((parseFloat(total)) * (parseFloat(porcentagemCustom)) * (parseFloat(porcentagemBotao)) /100) / parseFloat(pessoas.value)) .toFixed(2)
-
-
-
-

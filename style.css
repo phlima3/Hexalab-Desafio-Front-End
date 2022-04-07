@@ -30,11 +30,9 @@ input {
   font-weight: 700;
   border: none;
   text-align: right;
-  
 }
-input[type="number"]{
+input[type="number"] {
   padding-right: 10px;
-
 }
 
 .result input::placeholder {
@@ -48,22 +46,19 @@ fieldset {
 .vermelho {
   color: var(--error-color);
 }
-.erro{
-  
+.erro {
   outline: var(--error-color) 1px solid;
   color: var(--error-color);
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
-
-
 
 /*=== VARIABLES========================== */
 :root {
@@ -91,26 +86,11 @@ main {
   margin-left: 0rem;
   margin-top: 1.5rem;
 }
-.result input {
-  width: 20rem;
-  height: 2.62rem;
-
-  border-radius: 8px;
-  background: var(--button-color);
-  color: #ffffff;
-  margin-top: 8px;
-}
-.result input[type="text"] {
-  height: 42px;
-  background-image: url(assets/images/ZZWhite.svg);
-  background-repeat: no-repeat;
-  background-position: 20px center;
-}
 
 .result .valor-pessoa {
   margin-top: 1.5rem;
 }
-.result .inputs-resultado{
+.result .inputs-resultado {
   width: 20rem;
   height: 2.62rem;
 
@@ -123,22 +103,15 @@ main {
   background-image: url(assets/images/ZZWhite.svg);
   background-repeat: no-repeat;
   background-position: 20px center;
-
 }
-.result .valor-total-gorjeta p{
-
+.result p {
   font-family: "Mulish", sans-serif;
   font-size: 14px;
   font-weight: 700;
   border: none;
   text-align: right;
   margin: 12px;
- 
-
 }
-
-
-
 
 /* ===FORM=============== */
 .container {
@@ -269,42 +242,37 @@ input:checked + label {
   margin-right: 16px;
 }
 
-
 @media (min-width: 375px) {
-  form{
-    margin-left: 0px!important;
+  form {
+    margin-left: 0px !important;
   }
 }
 /* ===REPONSIVO  */
 
-
 @media (min-width: 486px) {
-  main{
+  main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  form{
+  form {
     margin-left: 20px;
   }
-  .result{
+  .result {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
   }
-  .valor-total{
+  .valor-total {
     display: flex;
     flex-direction: column;
   }
-  .valor-pessoa{
+  .valor-pessoa {
     display: flex;
     flex-direction: column;
   }
-
-
-
 }
 
 /* ===RESPONSIVO 800 px */

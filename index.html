@@ -29,12 +29,9 @@
           <label for="gorjetaPessoa"
             >Valor que cada pessoa irá pagar de gorjeta</label
           >
-          <input
-            type="text"
-            id="gorjetaPessoa"
-            disabled="true"
-            placeholder="0.00"
-          />
+          <div class="valor-gorjetapessoa inputs-resultado">
+            <p id="gorjetaPessoa">0.00</p>
+          </div>
         </div>
       </div>
       <form autocomplete="off" id="enviarForm">
@@ -48,9 +45,8 @@
               type="number"
               id="valorPedido"
               placeholder="Digite o valor aqui"
-              step="0.01"
               name="valor"
-              min="0.01"
+              maxlength="9"
             />
           </fieldset>
           <fieldset class="valor-gorjeta">
