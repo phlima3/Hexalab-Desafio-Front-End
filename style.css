@@ -199,18 +199,20 @@ input:checked + label {
   transition: 0.4s;
 }
 
-.gorjeta-personalizada {
+#gorjeta-personalizada {
   background: var(--background-input);
 
   width: 296px;
   height: 42px;
   border-radius: 8px;
   margin-top: 8px;
-
+}
+input#gorjeta-personalizada {
   background-image: url(assets/images/ZZporc.svg) !important;
   background-repeat: no-repeat;
   background-position: 20px center;
 }
+
 #gorjetaPersonalizada::placeholder {
   font-family: "Mulish", sans-serif;
   font-size: 14px;
@@ -349,7 +351,7 @@ input:checked + label {
     border-radius: 8px;
     margin-top: 8px;
 
-    background-image: url(assets/images/ZZrs.svg);
+    background-image: url(assets/images/ZZporc.svg);
     background-repeat: no-repeat;
     background-position: 20px center;
 

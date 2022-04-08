@@ -17,6 +17,8 @@ porcentagemCustom.onkeyup = () => {
   calcularTotal(porcentagem);
 };
 
+const porcentagemBotao = document.getElementsByClassName("bt-gorjeta");
+
 const pessoas = document.getElementById("qtdPessoas");
 pessoas.onchange = () => {
   calcularTotal(porcentagem);
@@ -30,6 +32,19 @@ let erro = false;
 
 let porcentagemSelected = 1;
 
+porcentagemCustom.onkeyup = () => {
+  for (let index = 0; index < porcentagemBotao.length; index++) {
+    const botao = porcentagemBotao[index];
+    if (botao.checked) {
+      botao.checked = false;
+    }
+  }
+  calcularTotal(porcentagemCustom.value);
+};
+if (porcentagemCustom.value >= 1) {
+  botao.checked = false;
+}
+
 function verificarInputs() {
   //VERIFICAR OS INPUTS
   const radiosValue = [];
@@ -39,6 +54,7 @@ function verificarInputs() {
       radiosValue.push(input.checked);
       if (input.checked) {
         porcentagemSelected = input.value;
+        porcentagemCustom.value = "";
       }
     } else if (!input.value || input.value <= 0) {
       input.className = "erro";
@@ -72,7 +88,6 @@ function verificarInputs() {
 function calcularTotal(p) {
   if (verificarInputs()) {
     porcentagem = p;
-
     resultadoConta.innerHTML = ((total.value * p) / 100).toLocaleString(
       "pt-BR",
       {
