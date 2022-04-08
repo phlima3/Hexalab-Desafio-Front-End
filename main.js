@@ -30,10 +30,8 @@ let erro = false;
 
 let porcentagemSelected = 1;
 
-//VERIFICAR OS INPUTS
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
+function verificarInputs() {
+  //VERIFICAR OS INPUTS
   const radiosValue = [];
 
   inputs.forEach((input) => {
@@ -64,21 +62,27 @@ form.addEventListener("submit", (event) => {
       erro = false;
     }
   }
-  if (!erro) {
-    calcularTotal();
+  if (erro) {
+    return false;
+  } else {
+    return true;
   }
-});
+}
 
 function calcularTotal(p) {
-  console.log(p);
-  porcentagem = p;
+  if (verificarInputs()) {
+    porcentagem = p;
 
-  resultadoConta.innerHTML = ((total.value * p) / 100).toLocaleString("pt-BR", {
-    minimumFractionDigits: 2,
-  });
-  resultadoPessoa.innerHTML = (
-    (total.value * p) /
-    100 /
-    pessoas.value
-  ).toLocaleString("pt-BR", { minimumFractionDigits: 2 });
+    resultadoConta.innerHTML = ((total.value * p) / 100).toLocaleString(
+      "pt-BR",
+      {
+        minimumFractionDigits: 2,
+      }
+    );
+    resultadoPessoa.innerHTML = (
+      (total.value * p) /
+      100 /
+      pessoas.value
+    ).toLocaleString("pt-BR", { minimumFractionDigits: 2 });
+  }
 }
